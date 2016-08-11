@@ -9,7 +9,6 @@ using namespace std;
 void quickSort(vector<int> &arr, int left, int right);
 
 int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     const int SIZE = 10;
     vector<int> arr(SIZE);
 
