@@ -5,20 +5,24 @@
 #include <algorithm>
 using namespace std;
 
-#define SIZE 10
 
 void quickSort(vector<int> &arr, int left, int right);
 
 int main() {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    const int SIZE = 10;
     vector<int> arr(SIZE);
-    for (int i = 0; i < SIZE; i++) {
+
+    for (int i = 0; i < SIZE; i++) {    // input
         arr[i] = rand() % 20;
     }
-    quickSort(arr, 0, SIZE - 1);
-    for (int i = 0; i < SIZE; i++) {
+
+    quickSort(arr, 0, SIZE - 1);    // sort
+
+    for (int i = 0; i < SIZE; i++) {    // output
         cout << arr[i] << endl;
     }
+
     return 0;
 }
 
