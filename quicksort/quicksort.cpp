@@ -11,13 +11,15 @@ vector<int> arr(SIZE);
 void quickSort(int left, int right);
 
 int main() {
-    for (int i = 0; i < SIZE; i++) {    // input
+    int i;
+
+    for (i = 0; i < SIZE; i++) {    // input
         arr[i] = rand() % 20;
     }
 
     quickSort(0, SIZE - 1);    // sort
 
-    for (int i = 0; i < SIZE; i++) {    // output
+    for (i = 0; i < SIZE; i++) {    // output
         cout << arr[i] << endl;
     }
 
