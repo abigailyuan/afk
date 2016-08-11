@@ -1,9 +1,11 @@
 // Merge Sort
+//Way to use:
+//Merge_sort(1,num); where 'num' is len(a).
 
 #include <iostream>
 using namespace std;
 
-int a[50];
+int a[50];//global
 void merge(int,int,int);
 void merge_sort(int low,int high)
 {
@@ -51,32 +53,4 @@ void merge(int low,int mid,int high){
     }
   }
   for(k=low;k<=high;k++) a[k]=b[k];
-}
-int main(){
-
-  int num,i;
-
-  cout<<"********************************************************************************"<<endl;
-  cout<<"                             MERGE SORT PROGRAM"<<endl;
-
-  cout<<"********************************************************************************"<<endl;
-  cout<<endl<<endl;
-  cout<<"Please Enter THE NUMBER OF ELEMENTS you want to sort [THEN PRESS ENTER]:"<<endl;
-  cin>>num;
-  cout<<endl;
-  cout<<"Now, Please Enter the ( "<< num <<" ) numbers (ELEMENTS) [THEN PRESS ENTER]:"<<endl;
-  for(i=1;i<=num;i++){
-
-    cin>>a[i] ;
-  }
-  merge_sort(1,num);
-  cout<<endl;
-  cout<<"So, the sorted list (using MERGE SORT) will be :"<<endl;
-  cout<<endl<<endl;
-
-  for(i=1;i<=num;i++)
-  cout<<a[i]<<"  ";
-
-  cout<<endl<<endl<<endl<<endl;
-  return 1;
 }
