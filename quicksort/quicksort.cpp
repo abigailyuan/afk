@@ -5,27 +5,28 @@
 #include <algorithm>
 using namespace std;
 
+#define SIZE 10
+int arr[SIZE];
 
-void quickSort(vector<int> &arr, int left, int right);
+void quickSort(int left, int right);
 
 int main() {
-    const int SIZE = 10;
-    vector<int> arr(SIZE);
+    int i;
 
-    for (int i = 0; i < SIZE; i++) {    // input
+    for (i = 0; i < SIZE; i++) {    // input
         arr[i] = rand() % 20;
     }
 
-    quickSort(arr, 0, SIZE - 1);    // sort
+    quickSort(0, SIZE - 1);    // sort
 
-    for (int i = 0; i < SIZE; i++) {    // output
+    for (i = 0; i < SIZE; i++) {    // output
         cout << arr[i] << endl;
     }
 
     return 0;
 }
 
-void quickSort(vector<int> &arr, int left, int right) {
+void quickSort(int left, int right) {
       int i = left, j = right;
       int tmp;
       int pivot = arr[(left + right) / 2];
@@ -47,7 +48,7 @@ void quickSort(vector<int> &arr, int left, int right) {
 
       /* recursion */
       if (left < j)
-            quickSort(arr, left, j);
+            quickSort(left, j);
       if (i < right)
-            quickSort(arr, i, right);
+            quickSort(i, right);
 }
