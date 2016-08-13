@@ -6,7 +6,7 @@
 using namespace std;
 
 #define SIZE 10
-vector<int> arr(SIZE);
+int arr[SIZE];
 
 void quickSort(int left, int right);
 
