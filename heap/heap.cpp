@@ -9,15 +9,15 @@ using namespace std;
 #define INIT 10
 int arr[SIZE];
 
-int main(){
+int main() {
     int newvar = INIT;
     int len;
-    cin>>len;
+    cin >> len;
     int i = 0;
-    for(i=0;i<len;i++){
-        cin>>arr[i];
+    for(i = 0; i < len; i++){
+        cin >> arr[i];
     }
-    vector<int> v(arr, arr+SIZE);
+    vector<int> v(arr, arr + SIZE);
     make_heap(v.begin(), v.end());//make heap
 
     pop_heap(v.begin(), v.end());
