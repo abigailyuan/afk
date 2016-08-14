@@ -45,8 +45,10 @@ void dijkstra(int source, int n) {
         for (int i = 0; i < a[cv].size(); i++) {
             // Iterating through all adjacent vertices
             if(!vis[a[cv][i].first] && a[cv][i].second + cw < dis[a[cv][i].first]) {
-                // If this node is not visited and the current parent node distance+distance from there to this node is shorted than the initial distace set to this node, update it
-                pq.push(make_pair(a[cv][i].first, (dis[a[cv][i].first] = a[cv][i].second + cw))); //Set the new distance and add to priority queue
+                // If this node is not visited and the current parent node distance+distance
+                // from there to this node is shorted than the initial distace set to this node, update it
+                pq.push(make_pair(a[cv][i].first, (dis[a[cv][i].first] = a[cv][i].second + cw)));
+                // Set the new distance and add to priority queue
             }
         }
     }
