@@ -18,15 +18,15 @@ int main() {
         cin >> arr[i];
     }
     vector<int> v(arr, arr + SIZE);
-    make_heap(v.begin(), v.end());//make heap
+    make_heap(v.begin(), v.end());  // make heap
 
     pop_heap(v.begin(), v.end());
-    v.pop_back();//pop the last element
+    v.pop_back();  // pop the last element
 
     v.push_back(newvar);
-    push_heap(v.begin(), v.end());//push newvar
+    push_heap(v.begin(), v.end());  // push newvar
 
-    sort_heap(v.begin(), v.end());//sort
+    sort_heap(v.begin(), v.end());  // sort
 
     return 0;
 }
