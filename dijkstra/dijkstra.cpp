@@ -16,7 +16,7 @@ bool vis[sz] = {0};  // Determines whether the node has been visited or not
 class prioritize {
 // Custom Comparator for Determining priority for priority queue (shortest edge comes first)
 public:
-    bool operator ()(pair<int, int> &p1 ,pair<int, int> &p2) {
+    bool operator ()(pair<int, int> &p1, pair<int, int> &p2) {
         return p1.second > p2.second;
     }
 };
