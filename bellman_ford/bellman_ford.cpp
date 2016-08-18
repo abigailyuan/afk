@@ -14,6 +14,7 @@ vector< pair<int, int> > a[sz];  // Adjacency list
 int dis[sz];  // Stores shortest distance
 bool vis[sz] = {0};  // Determines whether the node has been visited or not
 int predecessor[sz];
+int graph[V_num][V_num];
 
 void bellmanFord(int source, int target){
     //Initialization of vertices
@@ -36,6 +37,29 @@ void bellmanFord(int source, int target){
                 }
             }
         }
-    }    
+    }
+    //check negative-weight cycles:
+    for(i=0;i<V_num;i++){
+        for(j=1;j<V_num;j++){
+            if((dis[i] + graph[i][j]) < dis[j]){
+                cout<<"Graph contains a negative-weight cycle"<<endl;
 
+            }
+        }
+    }
+}
+
+int main(){
+
+    int i,j = 0, 0;
+    for(i;i<V_num;i++){
+        for(j;j<V_num;j++){
+            graph[i][j] = 1; //read a graph with edges of length 1
+        }
+    }
+    int vertex1, vertex2 = 1,2;
+    bellmanFord(vertex1, vertex2);
+    cout<<"the shortest path between vertex 1 and vertex 2 is: "<<dis[vertex2]<<endl;
+
+    return 0;
 }
